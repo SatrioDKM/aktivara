@@ -10,7 +10,7 @@ body {
     left: -250px;
     height: 100vh;
     z-index: 1000;
-    /* background: #6dcc88; */
+    background: #6dcc88;
     color: #fff;
     transition: all 0.3s;
     overflow-y: auto;
@@ -22,7 +22,7 @@ body {
 
 #sidebar .sidebar-header {
     padding: 15px;
-    /* background: #6dcc88; */
+    background: #6dcc88;
     height: 56px;
     display: flex;
     align-items: center;
