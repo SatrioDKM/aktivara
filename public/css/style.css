@@ -1,0 +1,86 @@
+/* File: public/css/style.css */
+body {
+    padding-top: 56px; /* Tinggi navbar */
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    z-index: 1000;
+    /* background: #6dcc88; */
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: auto;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar .sidebar-header {
+    padding: 15px;
+    /* background: #6dcc88; */
+    height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+#sidebar .sidebar-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: calc(100vh - 56px);
+    transition: all 0.3s;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+.navbar {
+    z-index: 1001; /* Memastikan navbar selalu di atas */
+}
+
+#sidebarCollapse {
+    transition: margin-left 0.3s;
+}
+
+#sidebarCollapse.active {
+    margin-left: 250px;
+}
+
+.navbar-brand {
+    transition: margin-left 0.3s;
+}
+
+.navbar-brand.active {
+    margin-left: 250px;
+}
+
+/* Styling tambahan untuk user dropdown */
+.dropdown-toggle::after {
+    display: none; /* Menghilangkan tanda panah dropdown default */
+}
+
+.dropdown-menu {
+    min-width: 120px; /* Menyesuaikan lebar minimum dropdown */
+}
+
+.nav-link i {
+    font-size: 1.2rem; /* Menyesuaikan ukuran ikon user */
+}
