@@ -22,7 +22,7 @@
             <a class="navbar-brand {{ request()->is('home') ? 'active' : '' }}" href="/home">
                 <i class="bi bi-house"></i> Dashboard
             </a>
-            <a class="navbar-brand {{ request()->is('blog') ? 'active' : '' }}" href="/activities">
+            <a class="navbar-brand {{ request()->is('activities') ? 'active' : '' }}" href="/activities">
                 <i class="bi bi-file-earmark-text"></i> Laporan
             <a class="navbar-brand {{ request()->is('assets') ? 'active' : '' }}" href="/assets">
                 <i class="bi bi-box"></i> Aset
@@ -51,7 +51,7 @@
                 <i class="bi bi-house"></i> Dashboard
             </a>
             <a class="navbar-brand {{ request()->is('activities') ? 'active' : '' }}" href="/activities">
-                <i class="bi bi-file-earmark-tex"></i> Laporan
+                <i class="bi bi-file-earmark-text"></i> Laporan
             </a>
             <a class="navbar-brand {{ request()->is('assets') ? 'active' : '' }}" href="/assets">
                 <i class="bi bi-box"></i> Aset

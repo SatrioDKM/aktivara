@@ -2,12 +2,6 @@ body {
     background-color: aquamarine;
 }
 
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Sesuaikan untuk memastikan navbar di atas konten */
-}
-
 .navbar .active {
     color: #00ff6e; /* Warna aktif, sesuaikan dengan desainmu */
     font-weight: bold;
@@ -55,7 +49,7 @@ body {
 @media (max-width: 576px) {
     .navbar .navbar-brand {
         font-size: 12px; /* Ukuran font lebih kecil lagi untuk ponsel */
-        padding: 6px; /* Padding lebih kecil */
+        padding: 3px; /* Padding lebih kecil */
     }
 }
 /* Menggunakan Flexbox untuk memisahkan ikon dan teks */
@@ -113,7 +107,7 @@ body {
 Input and select field styling .bg-gray-700 {
     background-color: #3a3a3a;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 0.5rem;
     border-radius: 0.375rem;
     width: 100%;
@@ -121,7 +115,7 @@ Input and select field styling .bg-gray-700 {
 
 select,
 input[type="date"] {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Button styling */
@@ -188,21 +182,21 @@ input[type="date"] {
 /* Status and urgency label styling */
 .bg-red-500 {
     background-color: #e53e3e;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 0.25rem 0.5rem;
     border-radius: 0.375rem;
 }
 
 .bg-green-500 {
     background-color: #48bb78;
-    color: white;
+    color: rgb(2, 2, 2);
     padding: 0.25rem 0.5rem;
     border-radius: 0.375rem;
 }
 
 .bg-yellow-500 {
     background-color: #ecc94b;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 0.25rem 0.5rem;
     border-radius: 0.375rem;
 }
