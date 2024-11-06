@@ -6,10 +6,16 @@ use App\Http\Controllers\AssetController;
 use App\Http\Controllers\NotificationController;
 
 
-
+Route::get('/login', function () {
+    return view('login');
+});
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
+});
+
+Route::get('/logout', function () {
+    return view('login');
 });
 
 Route::get('/home', function () {

@@ -1,90 +1,112 @@
-<!-- File: resources/views/layouts/app.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
+    <title>Sidebar With Bootstrap</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
-    <title>Aktivara</title>
 </head>
-<body>
-    
-<!-- Side Navbar (Desktop) -->
-<div class="d-none d-lg-block">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container-fluid justify-content-md-around">
-            <a class="navbar-brand {{ request()->is('home') ? 'active' : '' }}" href="/home">
-                <i class="bi bi-house"></i> Dashboard
-            </a>
-            <a class="navbar-brand {{ request()->is('activities') ? 'active' : '' }}" href="/activities">
-                <i class="bi bi-file-earmark-text"></i> Laporan
-            <a class="navbar-brand {{ request()->is('assets') ? 'active' : '' }}" href="/assets">
-                <i class="bi bi-box"></i> Aset
-            </a>
-            <a class="navbar-brand {{ request()->is('notification') ? 'active' : '' }}" href="/notification">
-                <i class="bi bi-bell"></i> Notifikasi
-            </a>
-<div class="dropdown">
-      <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="bi bi-person-circle"></i> Akun
-      </a>
-      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item bi bi-person-fill" href="/profil">Profil Saya</a></li>
-        <li><a class="dropdown-item bi bi-gear" href="/pengaturan">Pengaturan</a></li>
-        <li><a class="dropdown-item bi-box-arrow-right" href="/logout">Logout</a></li>
-      </ul>
-    </div>
-    </nav>
-</div>
 
-<!-- Bottom Navbar (Mobile) -->
-<div class="d-block d-lg-none">
-    <nav class="navbar navbar-expand navbar-dark bg-dark fixed-bottom">
-        <div class="container-fluid justify-content-around">
-            <a class="navbar-brand {{ request()->is('home') ? 'active' : '' }}" href="/home">
-                <i class="bi bi-house"></i> Dashboard
-            </a>
-            <a class="navbar-brand {{ request()->is('activities') ? 'active' : '' }}" href="/activities">
-                <i class="bi bi-file-earmark-text"></i> Laporan
-            </a>
-            <a class="navbar-brand {{ request()->is('assets') ? 'active' : '' }}" href="/assets">
-                <i class="bi bi-box"></i> Aset
-            </a>
-            <a class="navbar-brand {{ request()->is('notification') ? 'active' : '' }}" href="/notification">
-                <i class="bi bi-bell"></i> Notifikasi
-            </a>
-           <div class="dropdown dropup">
-            <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             <i class="bi bi-person-fill"></i> Akun
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item bi bi-person-fill" href="/profil">Profil Saya</a></li>
-            <li><a class="dropdown-item bi bi-gear" href="/pengaturan">Pengaturan</a></li>
-            <li><a class="dropdown-item bi-box-arrow-right" href="/logout">Logout</a></li>
-            </ul>
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <img src="images/logoWhite.png" alt="Logo" style="width: 30px; height: 30px;">
+                </button>
+                <div class="sidebar-logo">
+                    <a href="/home">Aktivara</a>
+                </div>
             </div>
-        </div>
-    </nav>
-</div>
-        <div id="content">
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="/home" class="sidebar-link">
+                        <i class="lni lni-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                        <i class="lni lni-book"></i>
+                        <span>Laporan</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="/activities" class="sidebar-link">Buat Laporan</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Daftar Laporan</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
+                        <i class="lni lni-package"></i>
+                        <span>Assets</span>
+                    </a>
+                    <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                             <li class="sidebar-item">
+                            <a href="/assets" class="sidebar-link">Tambah Assets</a>
+                        </li>
+                            <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#multi-two" aria-expanded="false" aria-controls="multi-two">
+                                Daftar Assets
+                            </a>
+                            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link">Link 1</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link">Link 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/notification" class="sidebar-link">
+                        <i class="lni lni-popup"></i>
+                        <span>Notification</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-cog"></i>
+                        <span>Setting</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="/logout" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main p-3">
+            <div id="content">
             @yield('content')
         </div>
+        </div>
     </div>
-    <script>
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-                $('#content').toggleClass('active');
-                $('#sidebarCollapse').toggleClass('active');
-                $('.navbar-brand').toggleClass('active');
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
+
 </html>
