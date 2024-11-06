@@ -6,6 +6,16 @@ hamBurger.addEventListener("click", function () {
 
 const sidebarLinks = document.querySelectorAll(".sidebar-link");
 
+const sidebar = document.querySelector("#sidebar");
+
+sidebar.addEventListener("mouseenter", function () {
+    sidebar.classList.add("expand");
+});
+
+sidebar.addEventListener("mouseleave", function () {
+    sidebar.classList.remove("expand");
+});
+
 const currentUrl = window.location.pathname;
 
 sidebarLinks.forEach((link) => {

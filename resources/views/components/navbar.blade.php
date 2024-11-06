@@ -44,10 +44,10 @@
                     </a>
                     <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="/activities" class="sidebar-link">Buat Laporan</a>
+                            <a href="/buatLaporan" class="sidebar-link">Buat Laporan</a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Daftar Laporan</a>
+                            <a href="/daftarLaporan" class="sidebar-link">Daftar Laporan</a>
                         </li>
                     </ul>
                 </li>
