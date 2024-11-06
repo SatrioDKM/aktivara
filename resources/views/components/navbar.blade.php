@@ -17,7 +17,7 @@
     
 <!-- Side Navbar (Desktop) -->
 <div class="d-none d-lg-block">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-left">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid justify-content-md-around">
             <a class="navbar-brand {{ request()->is('home') ? 'active' : '' }}" href="/home">
                 <i class="bi bi-house"></i> Dashboard

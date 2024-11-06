@@ -3,13 +3,9 @@ body {
 }
 
 .navbar {
-    position: fixed; /* Membuat navbar tetap di atas ketika di-scroll */
-    top: 0; /* Posisi dari atas layar */
-    left: 0; /* Posisi dari kiri layar */
-    width: 100%; /* Lebar navbar 100% */
-    z-index: 1000; /* Membuat navbar di atas konten lainnya */
-    background-color: #333; /* Warna latar navbar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan jika diperlukan */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Sesuaikan untuk memastikan navbar di atas konten */
 }
 
 .navbar .active {
@@ -114,8 +110,7 @@ body {
     }
 }
 
-/* Input and select field styling */
-.bg-gray-700 {
+Input and select field styling .bg-gray-700 {
     background-color: #3a3a3a;
     border: none;
     color: white;
