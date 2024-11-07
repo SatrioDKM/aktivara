@@ -30,7 +30,10 @@
             <!-- Nama Lengkap -->
             <div class="text-center mb-4">
                 <img class="img-profile rounded-circle" src="images/logoRounded.png" style="width: 200px; height: 200px;">
-                            <input type="file" class="form-control" id="fullName" value="Upload Foto" disabled>
+            </div>
+            
+            <div class="text-center mb-4">
+                <input type="file" class="form-control" id="fullName" value="Upload Foto" disabled>
             </div>
             
             <div class="form-group">
@@ -72,12 +75,6 @@
             <div class="form-group">
                 <label for="phoneNumber">Nomor Telepon:</label>
                 <input type="text" class="form-control" id="phoneNumber" value="+62 812-3456-7890" disabled>
-            </div>
-
-            <!-- Status Akun -->
-            <div class="form-group">
-                <label for="accountStatus">Status Akun:</label>
-                <input type="text" class="form-control" id="accountStatus" value="Aktif" default:disabled>
             </div>
 
             <!-- Action Buttons -->

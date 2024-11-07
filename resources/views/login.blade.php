@@ -109,7 +109,7 @@
             <input type="text" name="NIK" id="NIK" maxlength="20" title="Nomor Induk Karyawan"
                 placeholder="Nomor Induk Karyawan" required>
             <input type="password" name="password" placeholder="Password" required>
-            <div class="form-check">
+            <div class="form-check" style="margin-top: 3%">
                 <input type="checkbox" class="form-check-input" id="remember">
                      <label class="form-check-label" for="remember">Simpan Nomor Induk Karyawan</label>
             </div>
