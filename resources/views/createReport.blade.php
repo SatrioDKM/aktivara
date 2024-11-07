@@ -39,6 +39,4 @@
             <button type="submit" class="btn btn-primary">Simpan Laporan</button>
         </form>
     </div>
-
-
 @endsection
